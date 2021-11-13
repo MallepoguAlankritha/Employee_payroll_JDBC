@@ -9,7 +9,7 @@ public class EmployeePayRollTest {
 
     @Test
     public void givenEmployeePayrollDB_WhenRetrieved_ShouldMatchEmployeeCount() {
-        String sql = "select * from employee_payroll_service_mysql";
+        String sql = "select * from employee_payroll";
         List<Employee> employeePayrollDataList = employeePayRollService.queryExecute(sql);
         Assert.assertEquals(8, employeePayrollDataList.size());
     }
@@ -25,7 +25,7 @@ public class EmployeePayRollTest {
     @Test
     public void givenUpdatingRahulBasicPay_whenUpdate_ShouldReturnUpdatedPay() {
         double BasicPay = 800000;
-        String Name = "alankritha";
+        String Name = "rahul";
         double salaryUpdated = employeePayRollService.updateBasicPay(Name, BasicPay);
         Assert.assertEquals(BasicPay, salaryUpdated,0.0);
     }
