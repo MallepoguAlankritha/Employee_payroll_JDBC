@@ -3,7 +3,8 @@ import java.util.ArrayList;
 
 public class Employee {
     int EmpId;
-    String EmpName, PhoneNumber, Address, Department, EmpStart, Gender;
+    String EmpName, Address, Department, EmpStart, Gender;
+	int PhoneNumber;
     double BasicPay, Deductions, TaxablePay, IncomeTax, NetPay;
     ArrayList<Employee> empList;
 
@@ -31,12 +32,12 @@ public class Employee {
         EmpName = empName;
     }
 
-    public String getPhoneNumber() {
+    public int getPhoneNumber() {
         return PhoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        PhoneNumber = phoneNumber;
+    public void setPhoneNumber(int i) {
+        PhoneNumber = i;
     }
 
     public String getAddress() {
@@ -128,5 +129,6 @@ public class Employee {
                 ", NetPay=" + NetPay +
                 '}';
     }
+
 }
    
